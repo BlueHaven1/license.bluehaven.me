@@ -68,7 +68,7 @@
     <h1>Login to Access License System</h1>
     <a
       class="discord-btn"
-      href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=https%3A%2F%2Fyourdomain.com%2Fcallback.php&response_type=code&scope=identify%20guilds.members.read">
+      href="https://discord.com/api/oauth2/authorize?client_id=1376679108355948544&redirect_uri=https%3A%2F%2Flicense.bluehaven.me%2Fcallback.php&response_type=code&scope=identify%20guilds.members.read">
       Login with Discord
     </a>
   </div>
