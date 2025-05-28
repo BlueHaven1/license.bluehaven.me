@@ -1,17 +1,3 @@
-<?php
-require __DIR__ . '/vendor/autoload.php';
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-$clientId = $_ENV['DISCORD_CLIENT_ID'];
-$redirectUri = urlencode($_ENV['DISCORD_REDIRECT_URI']); // URL-encoded
-$scope = urlencode("identify guilds.members.read");
-$oauthUrl = "https://discord.com/api/oauth2/authorize?client_id=$clientId&redirect_uri=$redirectUri&response_type=code&scope=$scope";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,7 +66,9 @@ $oauthUrl = "https://discord.com/api/oauth2/authorize?client_id=$clientId&redire
 <body>
   <div class="login-container">
     <h1>Login to Access License System</h1>
-    <a class="discord-btn" href="<?= $oauthUrl ?>">
+    <a
+      class="discord-btn"
+      href="https://discord.com/api/oauth2/authorize?client_id=1376679108355948544&redirect_uri=https%3A%2F%2Flicense.bluehaven.me%2Fcallback.php&response_type=code&scope=identify%20guilds.members.read">
       Login with Discord
     </a>
   </div>
